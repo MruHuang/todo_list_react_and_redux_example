@@ -7,14 +7,12 @@ import {
 } from '../../actions';
 
 export default connect(
-  (state) => ({
-    todo: state.getIn(['todo', 'todo'])
-  }),
+  (state) => ({ }),
   (dispatch) => ({
     onChangeText: (event) => (
       dispatch(changeText({ text: event.target.value }))
     ),
-    onSubmitQuery: () => {
+    onCreateTodo: () => {
       dispatch(createTodo());
       dispatch(changeText({ text: '' }));
     }

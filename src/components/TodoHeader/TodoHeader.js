@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 
 const TodoHeader = ({
   onChangeText,
-  onCreateTodo,
-  todo,
+  onCreateTodo
 }) => (
   <div>
-    <h1>TodoHeader</h1>
-    <input type="text" onChange={onChangeText} />
-    <button onClick={onCreateTodo}>送出</button>
+    <h1>Todo List</h1>
+    <input type="text" onChange={ onChangeText } />
+    <button onClick={ onCreateTodo }>送出</button>
   </div>
 );
 
