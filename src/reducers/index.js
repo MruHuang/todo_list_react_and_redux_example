@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import UiState from '../constants/model.js';
+import UiState from './ui/todoReducers.js';
 
 export default handleActions({
 	SHOW: (state, { payload }) => (
