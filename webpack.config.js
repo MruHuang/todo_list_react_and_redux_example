@@ -34,4 +34,5 @@ module.exports = {
     port: 3000,
   },
   plugins: [HTMLWebpackPluginConfig],
+  devtool: 'source-map'
 }
