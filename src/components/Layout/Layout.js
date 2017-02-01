@@ -4,7 +4,7 @@ import TodoHeaderContainer from '../../containers/TodoHeaderContainer';
 import TodoListContainer from '../../containers/TodoListContainer';
 import FilterContainer from '../../containers/FilterContainer';
 
-const Main = () => (
+const Layout = () => (
   <div>
     <TodoHeaderContainer />
     <TodoListContainer />
@@ -12,4 +12,4 @@ const Main = () => (
   </div>
 );
 
-export default Main;
+export default Layout;

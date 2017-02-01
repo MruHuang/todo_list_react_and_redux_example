@@ -14,7 +14,7 @@ export default connect(
     onChangeText: (event) => (
       dispatch(changeText({
         text: event.target.value,
-        completed: true
+        completed: false
       }))
     ),
     onCreateTodo: () => {

@@ -20,10 +20,13 @@ import {
   CHANGE_TEXT: (state, { payload }) => {
     return state.merge({ 'todo': payload });
   },
-  SHOW_ALL: (state, { payload }) => (
+  COMPLETE_TODO: (state, { payload }) => {
+    return state.setIn(['todos', payload.index, 'completed'], true);
+  },
+  SHOW_ALL: (state) => (
     state.set('filter', 'show_all')
   ),
-  SHOW_COMPLETED: (state, { payload }) => (
+  SHOW_COMPLETED: (state) => (
     state.set('filter', 'show_completed')
   )
 }, TodoState);

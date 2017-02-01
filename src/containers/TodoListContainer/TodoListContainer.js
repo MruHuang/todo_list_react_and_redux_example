@@ -3,6 +3,7 @@ import TodoList from '../../components/TodoList';
 
 import {
   deleteTodo,
+  completeTodo
 } from '../../actions';
 
 export default connect(
@@ -13,6 +14,9 @@ export default connect(
   (dispatch) => ({
     onDeleteTodo: (index) => () => (
       dispatch(deleteTodo({ index }))
+    ),
+    onCompleteTodo: (index) => () => (
+      dispatch(completeTodo({ index }))
     )
   })
 )(TodoList);
