@@ -5,8 +5,8 @@ import Main from './components/Main';
 import store from './store';
 
 ReactDOM.render(
-	<Provider store={ store }>
-	  <Main />
-	</Provider>,
-	document.getElementById('app')
+  <Provider store={store}>
+    <Main />
+  </Provider>,
+  document.getElementById('app')
 );

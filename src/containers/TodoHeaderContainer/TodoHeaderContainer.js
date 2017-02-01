@@ -7,10 +7,15 @@ import {
 } from '../../actions';
 
 export default connect(
-  (state) => ({ }),
+  (state) => ({
+    todo: state.getIn(['todo', 'todo'])
+  }),
   (dispatch) => ({
     onChangeText: (event) => (
-      dispatch(changeText({ text: event.target.value }))
+      dispatch(changeText({
+        text: event.target.value,
+        completed: true
+      }))
     ),
     onCreateTodo: () => {
       dispatch(createTodo());

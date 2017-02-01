@@ -7,19 +7,8 @@ import {
 
 export default connect(
   (state) => ({
-  	todos: [{
-	    id: '1',
-	    text: '2',
-	    updatedAt: '3',
-	    completed: false,
-	  },
-	  {
-	    id: '2',
-	    text: '3',
-	    updatedAt: '4',
-	    completed: false,
-	  }]//,
-    //todos: state.getIn(['todos'])
+    todos: state.getIn(['todo', 'todos']),
+    filter: state.getIn(['todo', 'filter'])
   }),
   (dispatch) => ({
     onDeleteTodo: (index) => () => (

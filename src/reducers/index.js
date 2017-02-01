@@ -1,8 +1,9 @@
-import { handleActions } from 'redux-actions';
-import UiState from './ui/todoReducers.js';
+import { combineReducers } from 'redux-immutable';
+// import ui from './ui/uiReducers';
+import todo from './data/todoReducers';
 
-export default handleActions({
-	SHOW: (state, { payload }) => (
-		state.set('todos', payload.todo)
-	)
-}, UiState);
+const rootReducer = combineReducers({
+  todo,
+});
+
+export default rootReducer;
