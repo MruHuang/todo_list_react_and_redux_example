@@ -31,15 +31,14 @@
 ### Reducers
 更新state。
 
-這裡說明一下Immutable.js存取物件或陣列的方法，使用`set()`和`get()；而當list或map內部有包list或map時，則需要使用`setIn()`和`getIn()`。
-這邊說明一下，如果list或map內部有包list或map時，指定索引的方式為放到陣列裡面，例如：
+這裡說明一下Immutable.js存取物件或陣列的方法，使用`set()`和`get()；而當list或map內部有包list或map時，則需要使用`setIn()`和`getIn()`。如果list或map內部有包list或map時，指定索引的方式為放到陣列裡面，例如：
 
-  var list_1 = Immutable.fromJS(['a', ['b', 'c', 'd'], 'e']);
-  var list_2 = list1.set([1, 2], 'new'); //list_2 為 ['a', ['b', 'c', new'], 'e']
+    var list_1 = Immutable.fromJS(['a', ['b', 'c', 'd'], 'e']);
+    var list_2 = list1.set([1, 2], 'new'); //list_2 為 ['a', ['b', 'c', new'], 'e']
 
 所以，當想要設定TodoState的todos中某個item的completed的值為true時，就要找到TodoState的todos，再使用回傳的index找todos裡面指定的索引的元素，再再找這個item裡面的completed，然後設定completed為true。
 
-	state.setIn(['todos', payload.index, 'completed'], true);
+    state.setIn(['todos', payload.index, 'completed'], true);
 
 ### Store
 儲存state。
