@@ -42,13 +42,18 @@
     state.setIn(['todos', payload.index, 'completed'], true);
 
 ### Store
-儲存state。
+儲存state的地方。
 
 ### Components
-純View的展示。
+純View的展示，這裡切分Components為
+
+- Layout：最外層的框框，用來包裝TodoHeader、TodoList和Filter
+- TodoHeader：含有新增task功能
+- TodoList：顯示task列表
+- Filter：顯示全部或已完成的tasks
 
 ### Container
-使用Container和Store溝通，對於這樣的拆分方式可參考[這篇](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nr2ds9lyk)。
+使用Container和Store溝通，對於這樣的拆分方式可參考[這篇](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nr2ds9lyk)，所以，若Component要跟Store溝通，就會有對應的Container。
 
 ## 參考資料
 - [Redux 實戰入門](https://github.com/kdchang/reactjs101/blob/master/Ch07/react-redux-real-world-example.md)
