@@ -18,7 +18,8 @@
 ### Constants
 定義Action Type和Model。
 
-#### Action
+#### Action Type
+將會用到的動作在這裡定義成常數，例如：建立一個task(CREATE_TODO)、刪除一個task(DELETE_TODO)。
 
 #### Model
 初始值放在Model。
