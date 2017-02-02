@@ -31,7 +31,7 @@
 ### Reducers
 更新state。
 
-這裡說明一下Immutable.js存取物件或陣列的方法，使用`set()`和`get()；而當list或map內部有包list或map時，則需要使用`setIn()`和`getIn()`。如果list或map內部有包list或map時，指定索引的方式為放到陣列裡面，例如：
+這裡說明一下Immutable.js存取物件或陣列的方法，使用`set()`和`get()`；而當list或map內部有包list或map時，則需要使用`setIn()`和`getIn()`。如果list或map內部有包list或map時，指定索引的方式為放到陣列裡面，例如：
 
     var list_1 = Immutable.fromJS(['a', ['b', 'c', 'd'], 'e']);
     var list_2 = list1.set([1, 2], 'new'); //list_2 為 ['a', ['b', 'c', new'], 'e']
