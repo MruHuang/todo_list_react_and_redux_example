@@ -20,10 +20,10 @@
 定義Action Type和Model。
 
 #### Action Type
-將會用到的動作在這裡定義成常數，例如：建立一個task(CREATE_TODO)、刪除一個task(DELETE_TODO)。
+將動作定義成常數，例如：建立一個task(CREATE_TODO)、刪除一個task(DELETE_TODO)。
 
 #### Model
-初始值放在Model。
+定義資料結構，並將初始值放在Model。
 
 這裡會使用`Immutable.fromJS()`將JavaScript Object轉換成ImmutableJS可用的Map結構。
 
