@@ -1,4 +1,5 @@
 # Todo List - React and Redux Example
+使用React與Redux實作Todo List。
 
 ## 功能介紹
 先來看看完成的樣子。
@@ -10,7 +11,7 @@
 - 新增一個task
 - 刪除一個task
 - 更改task狀態為完成 (初始狀態：未完成)
-- 切換filter，選擇呈現全部或已完成的task
+- 切換filter，列出全部或已完成的task
 
 ## 實作
 程式碼說明如下。
