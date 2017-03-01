@@ -1,34 +1,36 @@
-# Todo List - React and Redux Example
+# Todo List: React and Redux Example
 使用React與Redux實作Todo List。
 
-## 功能介紹
-先來看看完成的樣子。
-
+## 功能介紹 / Demo
 ![Todo List -  React and Redux Example](demo.gif)
 
 功能有：
 
-- 新增一個task
-- 刪除一個task
-- 更改task狀態為完成 (初始狀態：未完成)
-- 切換filter，列出全部或已完成的task
+- 新增一個todo
+- 刪除一個todo
+- [待完成] 編輯一個todo的名稱
+- 更改todo狀態：完成/未完成
+- 切換filter，列出全部或已完成的todo
 
-## 實作
+## 說明
 程式碼說明如下。
 
 ### Constants
 定義Action Type和Model。
 
 #### Action Type
-將動作定義成常數，例如：建立一個task(CREATE_TODO)、刪除一個task(DELETE_TODO)。
+將動作定義成常數，例如：建立一個todo(CREATE_TODO)、刪除一個todo(DELETE_TODO)。對規模小的應用程式來說，這看起來很多餘
 
 #### Model
-定義資料結構，並將初始值放在Model。
+Model的功能是
 
-這裡會使用`Immutable.fromJS()`將JavaScript Object轉換成ImmutableJS可用的Map結構。
+- 定義資料結構
+- 設定初始值
+
+這裡會使用`Immutable.fromJS()`將 TodoState 這個 JavaScript Object 轉換成 ImmutableJS 可用的 Map 結構，之後的操作都會使用 ImmutableJS 的 API，而非一般 JavaScript Object 操作的 API，注意別混淆了。
 
 ### Actions
-使用`createAction`來包裝action creator，使其return的值是flux的標準的payload格式。
+使用`createAction`來包裝action creator，使其回傳值是 flux 的標準的 payload 格式。
 
 ### Reducers
 更新state。
