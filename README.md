@@ -8,9 +8,10 @@
 
 - 新增一個 todo
 - 刪除一個 todo
-- [待完成] 編輯一個todo的名稱
+- [待完成] 編輯一個 todo 的名稱
 - 更改 todo 狀態：完成/未完成
 - 切換 filter，列出全部或已完成的 todo
+- [待完成] 清除所有已完成的 todo
 
 ## 說明
 程式碼說明如下。
@@ -19,7 +20,9 @@
 定義 Action Type 和 Model。
 
 #### Action Type
-將動作定義成常數，例如：建立一個 todo(CREATE_TODO)、刪除一個 todo(DELETE_TODO)。
+將動作定義成常數並放在一個檔案中，例如：建立一個 todo(CREATE_TODO)、刪除一個 todo(DELETE_TODO)。
+好處是這些常數會用於 create action 和 reducer，讓 action 和 reducer 直接引入和使用。
+其他的好處是如果使用IDE來編輯程式碼，可以輕易看見這些常數在專案中使用的地方，還有當打錯字時會出現 ReferenceError 的報錯，減少在茫茫code海中 debug 的時間。
 
 #### Model
 Model 的功能是
