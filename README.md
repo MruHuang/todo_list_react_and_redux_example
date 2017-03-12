@@ -21,8 +21,13 @@
 
 #### Action Type
 將動作定義成常數並放在一個檔案中，例如：建立一個 todo(CREATE_TODO)、刪除一個 todo(DELETE_TODO)。
-好處是這些常數會用於 create action 和 reducer，讓 action 和 reducer 直接引入和使用。
-其他的好處是如果使用IDE來編輯程式碼，可以輕易看見這些常數在專案中使用的地方，還有當打錯字時會出現 ReferenceError 的報錯，減少在茫茫code海中 debug 的時間。
+
+這樣做的好處是
+
+- 這些常數會用於 create action 和 reducer，讓 action 和 reducer 直接引入和使用，對於app整合的效果良好
+- 若使用IDE來編輯程式碼，可以輕易看見這些常數在專案中使用的地方
+- 可讓 linter 等的工具發揮作用
+- 當打錯字時會出現 ReferenceError 的報錯，減少在茫茫code海中 debug 的時間
 
 #### Model
 Model 的功能是
