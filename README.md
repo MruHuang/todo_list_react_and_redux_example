@@ -6,10 +6,10 @@
 
 功能有：
 
-- 新增一個 todo
-- 刪除一個 todo
+- 新增 todo
+- 刪除 todo
 - [待完成] 編輯一個 todo 的名稱
-- 更改 todo 狀態：完成/未完成
+- 更改 todo 狀態：完成 / 未完成
 - 切換 filter，列出全部或已完成的 todo
 - [待完成] 清除所有已完成的 todo
 
@@ -24,10 +24,10 @@
 
 這樣做的好處是
 
-- 這些常數會用於 create action 和 reducer，讓 action 和 reducer 直接引入和使用，對於app整合的效果良好
-- 若使用IDE來編輯程式碼，可以輕易看見這些常數在專案中使用的地方
+- 這些常數會用於 create action 和 reducer，讓 action 和 reducer 直接引入和使用，對於app整合的效果較好
+- 若使用 IDE 編輯程式碼，可以較容易看見常數在專案中使用的地方
 - 可讓 linter 等的工具發揮作用
-- 當打錯字時會出現 ReferenceError 的報錯，減少在茫茫code海中 debug 的時間
+- 打錯字時會出現 ReferenceError 的報錯，減少在茫茫 code 海中 debug 的時間
 
 #### Model
 Model 的功能是
@@ -35,36 +35,38 @@ Model 的功能是
 - 定義資料結構
 - 設定初始值
 
-這裡會使用`Immutable.fromJS()`將 TodoState 這個 JavaScript Object 轉換成 Immutable.js 可用的 Map 結構，之後的操作都會使用 ImmutableJS 的 API，而非一般 JavaScript Object 操作的 API，注意別混淆了。
+這裡會使用`Immutable.fromJS()`將 TodoState 這個 JavaScript Object 轉換成 Immutable.js 可用的 Map 結構，之後的操作都會使用 ImmutableJS 的 API，而非一般 JavaScript Object 操作的 API，別混淆了。
 
 ### Actions
-使用`createAction`來包裝 action creator，使其回傳值是 flux 的標準的 payload 格式。
+使用`createAction`來包裝 action creator，使其回傳值是 flux 標準的 payload 格式。
 
 ### Reducers
 更新 state。
 
-這裡說明一下 Immutable.js 存取物件或陣列的方法，使用`set()`和`get()`；而當 list 或 map 內部有包list或map時，則需要使用`setIn()`和`getIn()`。如果 list 或 map 內部有包 list 或 map 時，指定索引的方式為放到陣列裡面，例如：
+根據執行的動作，傳入目前的 state 和資料，經由運算後回傳下一步的 state。這裡也是使用 Immutable.js 的 API。
+
+Immutable.js 存取物件或陣列是使用`set()`和`get()`；而當 list 或 map 內部有包 list 或 map 時，則需要使用`setIn()`和`getIn()`，並用指定索引的方式為放到陣列裡面，例如：
 
     var list_1 = Immutable.fromJS(['a', ['b', 'c', 'd'], 'e']);
     var list_2 = list1.set([1, 2], 'new'); //list_2 為 ['a', ['b', 'c', new'], 'e']
 
-所以，當想要設定 TodoState 的 todos 中某個 item 的 completed 的值為 true 時，就要找到 TodoState 的 todos，再使用回傳的 index 找 todos 裡面指定的索引的元素，再再找這個 item 裡面的 completed，然後設定 completed 為 true。
+所以，當想要設定 TodoState 的 todos 中某個 item 的 completed 的值為 true 時，就要找到 TodoState 的 todos，再使用回傳的 index 找 todos 裡面指定的索引的元素，再找這個 item 裡面的 completed，然後設定 completed 為 true。
 
     state.setIn(['todos', payload.index, 'completed'], true);
 
 ### Store
-儲存 state 的地方。
+存放 state 的地方。
 
 ### Components
-純View的展示，這裡切分 Components 為
+純 View的 展示，這裡切分 Components 為
 
-- Layout：最外層的框框，用來包裝 TodoHeader、TodoList 和 Filter
+- Layout：最外層的框架，用來包裝 TodoHeader、TodoList 和 Filter
 - TodoHeader：含有新增 todo 功能
 - TodoList：顯示 todo 列表
-- Filter：顯示全部或已完成的todo
+- Filter：切換顯示全部或已完成的 todo
 
 ### Container
-使用 Container 和 Store 溝通，對於這樣的拆分方式可參考[這篇](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nr2ds9lyk)，所以，若 Component 要跟 Store 溝通，就會有對應的 Container。
+使用 Container 和 Store 溝通，對於這樣的拆分方式可參考[這篇](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nr2ds9lyk)。
 
 ## 參考資料
 - [Redux 實戰入門](https://github.com/kdchang/reactjs101/blob/master/Ch07/react-redux-real-world-example.md)
