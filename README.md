@@ -55,7 +55,7 @@ Immutable.js 存取物件或陣列是使用`set()`和`get()`；而當 list 或 m
     state.setIn(['todos', payload.index, 'completed'], true);
 
 ### Store
-存放 state 的地方。
+建立 Redux store 存放 app 的所有 state，唯一能改變 state 的方法只有發送 action。
 
 ### Components
 純 View的 展示，這裡切分 Components 為
