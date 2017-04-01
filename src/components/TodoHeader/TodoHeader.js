@@ -9,7 +9,7 @@ const TodoHeader = ({
   <div>
     <h1>Todo List</h1>
     <input type="text" value={todo.get('text')} onChange={onChangeText} />
-    <button onClick={onCreateTodo}>add new item</button>
+    <button onClick={onCreateTodo}>新增</button>
   </div>
 );
 

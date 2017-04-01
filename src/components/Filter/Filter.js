@@ -6,8 +6,8 @@ const Filter = ({
   onShowCompleted
 }) => (
   <div>
-    <button type="button" onClick={onShowAll}>all</button>
-    <button type="button" onClick={onShowCompleted}>completed</button>
+    <button type="button" onClick={onShowAll}>全部</button>
+    <button type="button" onClick={onShowCompleted}>已完成</button>
   </div>
 );
 

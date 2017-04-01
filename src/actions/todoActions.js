@@ -5,7 +5,8 @@ import {
   CHANGE_TEXT,
   COMPLETE_TODO,
   SHOW_ALL,
-  SHOW_COMPLETED
+  SHOW_COMPLETED,
+  EDIT_TODO
 } from '../constants/actionTypes';
 
 export const createTodo = createAction(CREATE_TODO);
@@ -14,3 +15,4 @@ export const changeText = createAction(CHANGE_TEXT);
 export const completeTodo = createAction(COMPLETE_TODO);
 export const showAll = createAction(SHOW_ALL);
 export const showCompleted = createAction(SHOW_COMPLETED);
+export const editTodo = createAction(EDIT_TODO);

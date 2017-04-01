@@ -3,7 +3,9 @@ import TodoList from '../../components/TodoList';
 
 import {
   deleteTodo,
-  completeTodo
+  completeTodo,
+  editTodo,
+  changeText
 } from '../../actions';
 
 export default connect(
@@ -17,6 +19,13 @@ export default connect(
     ),
     onCompleteTodo: (index) => () => (
       dispatch(completeTodo({ index }))
-    )
+    ),
+    onEditTodo: (index, isEdit) => () => {
+      dispatch(editTodo({ index, isEdit}))
+    },
+    onChangeText: (index, event) => () => {
+      var text = event ? event.target.value : '';
+      dispatch(changeText({ index, text}))
+    }
   })
 )(TodoList);

@@ -6,7 +6,8 @@ import {
   DELETE_TODO,
   CHANGE_TEXT,
   SHOW_ALL,
-  SHOW_COMPLETED
+  SHOW_COMPLETED,
+  EDIT_TODO
 } from '../../constants/actionTypes';
 
  const todoReducers = handleActions({
@@ -18,7 +19,7 @@ import {
     return state.set('todos', state.get('todos').splice(payload.index, 1))
   },
   CHANGE_TEXT: (state, { payload }) => {
-    return state.merge({ 'todo': payload });
+    return state.setIn(['todos', payload.index, 'text'], payload.text);
   },
   COMPLETE_TODO: (state, { payload }) => {
     return state.setIn(['todos', payload.index, 'completed'], true);
@@ -28,7 +29,10 @@ import {
   ),
   SHOW_COMPLETED: (state) => (
     state.set('filter', 'show_completed')
-  )
+  ),
+  EDIT_TODO: (state, { payload }) => {
+    return state.setIn(['todos', payload.index, 'isEdit'], !payload.isEdit);
+  }
 }, TodoState);
 
 export default todoReducers;
