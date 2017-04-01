@@ -8,7 +8,7 @@
 
 - 新增 todo
 - 刪除 todo
-- 編輯 todo 的名稱
+- 編輯 todo 名稱
 - 更改 todo 狀態：完成 / 未完成
 - 切換 filter，列出全部或已完成的 todo
 
