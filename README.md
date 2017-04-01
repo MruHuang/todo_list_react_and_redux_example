@@ -1,9 +1,9 @@
 # Todo List: React and Redux Example
 使用 React、Redux 和 [React-Bootstrap](https://react-bootstrap.github.io) 實作 Todo List。
 
-## 功能介紹 / Demo
-![Todo List -  React and Redux Example](demo.gif)
+[網誌版](https://cythilya.github.io/2017/04/01/todo-list-react-and-redux-example)。
 
+## 功能介紹
 功能有：
 
 - 新增 todo
@@ -11,6 +11,9 @@
 - 編輯 todo 名稱
 - 更改 todo 狀態：完成 / 未完成
 - 切換 filter，列出全部或已完成的 todo
+
+## Demo
+![Todo List -  React and Redux Example](demo.gif)
 
 ## 說明
 程式碼說明如下。
