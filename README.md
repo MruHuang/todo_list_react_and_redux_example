@@ -51,6 +51,8 @@ Immutable.js 存取物件或陣列是使用`set()`和`get()`；而當 list 或 m
 
     state.setIn(['todos', payload.index, 'completed'], true);
 
+更詳細的 Immutable.js 操作說明，除了官網外，還可參考[這篇](https://rhadow.github.io/2015/05/10/flux-immutable)。
+
 ### Store
 建立 Redux store 存放 app 的所有 state，唯一能改變 state 的方法只有發送 action。
 
