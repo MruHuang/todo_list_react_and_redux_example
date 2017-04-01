@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Button from 'react-bootstrap/lib/Button';
+import FormGroup from 'react-bootstrap/lib/FormGroup';
+import FormControl from 'react-bootstrap/lib/FormControl';
 
 const TodoHeader = ({
-  onChangeText,
   onCreateTodo,
+  onReserveText,
   todo,
 }) => (
   <div>
     <h1>Todo List</h1>
-    <input type="text" value={todo.get('text')} onChange={onChangeText} />
-    <button onClick={onCreateTodo}>新增</button>
+    <FormGroup>
+      <FormControl type="text" className="inline" value={todo.get('text')} onChange={onReserveText} />
+      <Button onClick={onCreateTodo}>新增</Button>
+    </FormGroup>
   </div>
 );
 

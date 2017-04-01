@@ -22,8 +22,9 @@
   "homepage": "https://github.com/cythilya/todo_list_react_and_redux_example#readme",
   "dependencies": {
     "immutable": "^3.8.1",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
+    "react": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-dom": "^15.4.2",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-actions": "^0.10.1",

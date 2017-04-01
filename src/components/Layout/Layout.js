@@ -5,7 +5,7 @@ import TodoListContainer from '../../containers/TodoListContainer';
 import FilterContainer from '../../containers/FilterContainer';
 
 const Layout = () => (
-  <div>
+  <div className="todo-list">
     <TodoHeaderContainer />
     <TodoListContainer />
     <FilterContainer />

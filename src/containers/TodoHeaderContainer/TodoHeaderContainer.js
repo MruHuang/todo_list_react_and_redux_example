@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import TodoHeader from '../../components/TodoHeader';
 
 import {
-  changeText,
+  reserveText,
   createTodo,
 } from '../../actions';
 
@@ -11,15 +11,12 @@ export default connect(
     todo: state.getIn(['todo', 'todo'])
   }),
   (dispatch) => ({
-    onChangeText: (event) => (
-      dispatch(changeText({
-        text: event.target.value,
-        completed: false
-      }))
+    onReserveText: (event) => (
+      dispatch(reserveText(event.target.value))
     ),
-    onCreateTodo: () => {
+    onCreateTodo: (event) => {
       dispatch(createTodo());
-      dispatch(changeText({ text: '' }));
+      dispatch(reserveText(''));
     }
   })
 )(TodoHeader);
