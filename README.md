@@ -55,7 +55,7 @@ Immutable.js 存取物件或陣列是使用`set()`和`get()`；而當 list 或 m
 建立 Redux store 存放 app 的所有 state，唯一能改變 state 的方法只有發送 action。
 
 ### Components
-純 View的 展示，這裡切分 Components 為
+純 View 的 展示，這裡切分 Components 為
 
 - Layout：最外層的框架，用來包裝 TodoHeader、TodoList 和 Filter
 - TodoHeader：含有新增 todo 功能
