@@ -63,10 +63,8 @@ Immutable.js 存取物件或陣列是使用`set()`和`get()`；而當 list 或 m
 - Filter：切換顯示全部或已完成的 todo
 
 ### Container
-使用 Container 和 Store 溝通，關於這樣的拆分方式可參考[這篇](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nr2ds9lyk)。
+使用 Container 和 Store 溝通，在此發送 dispatch 到 action更改 state。關於這樣的拆分方式可參考[這篇](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nr2ds9lyk)。
 
-## 後記
-相較於 Vue，React 全家餐的文件是相較散亂、難閱讀的，但 React 的社群活躍程度可讓 React 相關不斷蓬勃發展。
 
 ## 參考資料
 - [Redux 實戰入門](https://github.com/kdchang/reactjs101/blob/master/Ch07/react-redux-real-world-example.md)
