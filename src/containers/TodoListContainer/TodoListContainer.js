@@ -17,8 +17,8 @@ export default connect(
     onDeleteTodo: (index) => () => (
       dispatch(deleteTodo({ index }))
     ),
-    onCompleteTodo: (index) => () => (
-      dispatch(completeTodo({ index }))
+    onCompleteTodo: (index, status) => () => (
+      dispatch(completeTodo({ index, status}))
     ),
     onEditTodo: (index, isEdit) => () => {
       dispatch(editTodo({ index, isEdit}))

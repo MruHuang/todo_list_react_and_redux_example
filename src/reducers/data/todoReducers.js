@@ -23,7 +23,7 @@ import {
     return state.setIn(['todos', payload.index, 'text'], payload.text);
   },
   COMPLETE_TODO: (state, { payload }) => {
-    return state.setIn(['todos', payload.index, 'completed'], true);
+    return state.setIn(['todos', payload.index, 'completed'], !payload.status);
   },
   SHOW_ALL: (state) => (
     state.set('filter', 'show_all')

@@ -19,7 +19,7 @@ const TodoList = ({
     {
       todos.map((todo, index) => (
         <ListGroupItem key={index} className={(filter == 'show_completed' && !todo.get('completed')) ? 'hide' : 'show' }>
-          <Checkbox inline="true" defaultChecked={(todo.get('completed')) ? true : false } onChange={ onCompleteTodo(index) }>
+          <Checkbox inline={true} checked={(todo.get('completed'))} onChange={ onCompleteTodo(index, todo.get('completed')) }>
             <span className={(todo.get('completed')) ? 'isCompleted' : '' }>{ todo.get('text') }</span>
           </Checkbox>
           <Button onClick={ onDeleteTodo(index) }>刪除</Button>
