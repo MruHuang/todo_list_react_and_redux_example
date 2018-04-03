@@ -2,15 +2,13 @@
 使用 React、Redux 和 [React-Bootstrap](https://react-bootstrap.github.io) 實作 Todo List。
 
 ## 功能介紹
-功能有：
-
 - 新增 todo
 - 刪除 todo
 - 編輯 todo 名稱
 - 更改 todo 狀態：完成 / 未完成
 - 切換 filter，列出全部或已完成的 todo
 
-## 如何使用？
+## 如何使用
 ```
 $ npm install
 $ npm start
