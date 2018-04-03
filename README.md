@@ -16,7 +16,7 @@ $ npm start
 
 打開瀏覽器後即可在 `http://localhost:3000/` 看到以下畫面。
 
-![Todo List -  React and Redux Example](/assets/2017-04-01-todo-list-react-and-redux-example.gif)
+![Todo List -  React and Redux Example](https://cythilya.github.io/assets/2017-04-01-todo-list-react-and-redux-example.gif)
 
 ## 說明文件
 [說明](https://cythilya.github.io/2017/04/01/todo-list-react-and-redux-example)。
