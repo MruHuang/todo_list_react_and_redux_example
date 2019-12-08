@@ -3,6 +3,9 @@
 
 ## 功能介紹
 - 新增 todo
+- 查詢 todo
+- 取得google日歷 todo
+- 新增至LIST上列 todo
 - 刪除 todo
 - 編輯 todo 名稱
 - 更改 todo 狀態：完成 / 未完成
