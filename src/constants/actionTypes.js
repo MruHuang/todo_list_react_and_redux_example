@@ -6,3 +6,6 @@ export const SHOW_ALL = 'SHOW_ALL';
 export const SHOW_COMPLETED = 'SHOW_COMPLETED';
 export const EDIT_TODO = 'EDIT_TODO';
 export const RESERVE_TEXT = 'RESERVE_TEXT';
+export const CREATE_QUERY_TODO = 'CREATE_QUERY_TODO';
+export const SELECT_TODO = 'SELECT_TODO';
+export const GOOGLE_DATA_TODO = 'GOOGLE_DATA_TODO';
