@@ -11,7 +11,8 @@
 ## 如何使用
 ```
 $ npm install
-$ npm start
+
+$ npm start -- --port 8000
 ```
 
 打開瀏覽器後即可在 `http://localhost:3000/` 看到以下畫面。
