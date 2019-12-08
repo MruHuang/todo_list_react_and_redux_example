@@ -15,7 +15,7 @@ $ npm install
 $ npm start -- --port 8000
 ```
 
-打開瀏覽器後即可在 `http://localhost:3000/` 看到以下畫面。
+打開瀏覽器後即可在 `http://localhost:8000/` 看到以下畫面。
 
 ![Todo List -  React and Redux Example](https://cythilya.github.io/assets/2017-04-01-todo-list-react-and-redux-example.gif)
 
