@@ -1,4 +1,4 @@
-# Todo List: React and Redux Example
+# Todo List: React and Redux and Google Calendar Example
 使用 React、Redux 和 [React-Bootstrap](https://react-bootstrap.github.io) 實作 Todo List。
 
 ## 功能介紹
